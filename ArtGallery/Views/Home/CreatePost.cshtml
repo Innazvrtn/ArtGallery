@@ -1,0 +1,19 @@
+﻿
+@model ArtGallery.Models.PostViewModel
+@{
+    ViewBag.Title = "CreatePost";
+}
+
+<h2>CreatePost</h2>
+@using (Html.BeginForm("CreatePost", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+        <br /><br />
+        @Html.LabelFor(model => model.Discription, "Picture Discr")
+        <br />
+        @Html.EditorFor(model => model.Discription)
+        @Html.ValidationMessageFor(model => model.Discription)
+
+    <input type="file" name="upload" /><br>
+        <input type="submit" value="Calculate" />
+
+}
