@@ -24,7 +24,8 @@ namespace ArtGallery.DAL.Entities
         public virtual ICollection<Tag> Tags { get; set; }
         public Post()
         {
-            Tags = new List<Tag>();
+        //    Tags = new List<Tag>();
+            Comments = new List<Comment>();
         }
 
         public virtual ICollection<Comment> Comments { get; set; }

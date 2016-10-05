@@ -9,7 +9,7 @@ using ArtGallery.DAL.EF;
 
 namespace ArtGallery.DAL.Repositories
 {
-    class ClientManager : IClientManager
+   public class ClientManager : IClientManager
     {
         public GalleryContext Database { get; set; }
         public ClientManager(GalleryContext db)

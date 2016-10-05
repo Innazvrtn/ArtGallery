@@ -1,0 +1,19 @@
+﻿@model  IEnumerable<ArtGallery.Models.CommentViewModel>
+@{
+    ViewBag.Title = "ViewComment";
+}
+
+<h2>ViewComment</h2>
+@foreach (ArtGallery.Models.CommentViewModel b in Model)
+{
+  <p style="color:chocolate;border:solid 2px">  @b.Name</p>
+if (b.Text != null)
+{
+  <p>  @b.Text</p>}
+    if (b.Mark != null)
+    {
+  <p>  Mark: @b.Mark</p>}
+    <p>  Date: @b.Date</p>
+
+
+}

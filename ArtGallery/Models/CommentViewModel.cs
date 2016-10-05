@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace ArtGallery.BLL.DTO
+namespace ArtGallery.Models
 {
-   public class CommentDTO
+    public class CommentViewModel
     {
         public int Id { get; set; }
         public string IdUserComment { get; set; }
@@ -14,5 +13,6 @@ namespace ArtGallery.BLL.DTO
         public int? Mark { get; set; }
         public DateTime Date { get; set; }
         public int PostId { get; set; }
+        public string Name { get; set; }
     }
 }

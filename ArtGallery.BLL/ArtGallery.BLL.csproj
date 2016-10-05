@@ -57,9 +57,9 @@
   <ItemGroup>
     <Compile Include="DTO\CommentDTO.cs" />
     <Compile Include="DTO\PostDTO.cs" />
-    <Compile Include="DTO\PostToTagDTO.cs" />
     <Compile Include="DTO\TagDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="Infrastructure\ConfigurationAutoMapperBLL.cs" />
     <Compile Include="Infrastructure\OperationDetails.cs" />
     <Compile Include="Infrastructure\ServiceModule.cs" />
     <Compile Include="Infrastructure\ValidationException.cs" />

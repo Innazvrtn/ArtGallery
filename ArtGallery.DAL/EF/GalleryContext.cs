@@ -17,10 +17,10 @@ namespace ArtGallery.DAL.EF
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Tag> Tags { get; set; }
-        public DbSet<ClientProfile> ClientProfiles { get; set; }   
-        static string _connection;
+        public DbSet<ClientProfile> ClientProfiles { get; set; }
+
         public GalleryContext()
-    : base(_connection ?? "GalleryArt")
+    : base( "GalleryArt")
 {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<GalleryContext, ArtGallery.DAL.Migrations.Configuration>());
         }

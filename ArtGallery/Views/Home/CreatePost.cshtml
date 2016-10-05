@@ -7,13 +7,22 @@
 <h2>CreatePost</h2>
 @using (Html.BeginForm("CreatePost", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-        <br /><br />
-        @Html.LabelFor(model => model.Discription, "Picture Discr")
-        <br />
-        @Html.EditorFor(model => model.Discription)
-        @Html.ValidationMessageFor(model => model.Discription)
-
-    <input type="file" name="upload" /><br>
-        <input type="submit" value="Calculate" />
-
+    <div>
+    @Html.AntiForgeryToken()
+    <br>
+    @Html.LabelFor(model => model.Discription, "Description")
+    <br>
+    @Html.EditorFor(model => model.Discription)
+    <br>
+    @Html.ValidationMessageFor(model => model.Discription)
+    Tags
+    <br>
+    <input type="text" name="textTag" />
+    <br>
+    <input type="file" name="upload" />
+    <br>
+    <input type="submit" value="Add photo"  />
+    <br>
+    <p><a type="button" class="btn btn-default" href="/Home">Return</a></p>
+    </div>
 }

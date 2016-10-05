@@ -16,10 +16,10 @@ namespace ArtGallery.DAL.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
-        public string IdUserComent { get; set; }
+        public string IdUserComment { get; set; }
         public string Text { get; set; }
-        public int Mark { get; set; }
-        public DateTime Date { get; set; }
+        public int? Mark { get; set; }
+        public DateTime? Date { get; set; }
 
         public int PostId { get; set; }
         public virtual Post Post { get; set; }
